@@ -1,0 +1,173 @@
+
+/* ==========================
+   1. COULEURS ET BASE DU SITE
+   ========================== */
+
+:root {
+    --ivoire: #F3EBDD;
+    --vert: #26352B;
+    --or: #B99A65;
+    --charbon: #24221F;
+    --beige: #DED5C6;
+    --texte-secondaire: #625E55;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--charbon);
+    background: var(--ivoire);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ==========================
+   2. EN-TETE ET PIED DE PAGE
+   ========================== */
+
+.site-header {
+    background: var(--ivoire);
+    padding: 1rem 5vw;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--beige);
+}
+
+.site-footer {
+    background: var(--vert);
+    color: var(--ivoire);
+    padding: 2rem 5vw;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/* Logo en image */
+.logo {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    height: 55px;
+    object-fit: contain;
+}
+
+/* Menu de navigation */
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav a {
+    color: var(--vert);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--or);
+}
+
+/* ==========================
+   3. STRUCTURE GENERALE
+   ========================== */
+
+.container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+main {
+    flex: 1;
+}
+
+.section {
+    padding: 4rem 0;
+}
+
+.section-alt {
+    background: #E9E0D2;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--vert);
+}
+
+/* ==========================
+   4. BOUTONS
+   ========================== */
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border-radius: 3px;
+    background: var(--vert);
+    color: var(--ivoire);
+    text-decoration: none;
+    border: 1px solid var(--vert);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+.btn:hover {
+    background: var(--or);
+    border-color: var(--or);
+    color: var(--charbon);
+}
+
+/* ==========================
+   5. ADAPTATION AUX TELEPHONES
+   ========================== */
+
+@media (max-width: 600px) {
+    .site-header {
+        padding: 1rem 5%;
+    }
+
+    .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .logo img {
+        height: 45px;
+    }
+
+    .nav {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .section {
+        padding: 2.5rem 0;
+    }
+}

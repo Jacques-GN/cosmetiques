@@ -1,0 +1,65 @@
+.grid-produits {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.carte-produit {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.carte-produit:hover {
+    transform: translateY(-3px);
+}
+
+.carte-produit a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.carte-produit img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: #eee;
+}
+
+.carte-produit h3 {
+    padding: 1rem 1rem 0;
+    font-size: 1.1rem;
+}
+
+.carte-produit p {
+    padding: 0.3rem 1rem 1rem;
+    color: #6b3945;
+    font-weight: bold;
+}
+
+.filtres {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.filtre {
+    padding: 0.5rem 1.2rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background: #fff;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.filtre.actif,
+.filtre:hover {
+    border-color: #6b3945;
+    background: #6b3945;
+    color: #fff;
+}

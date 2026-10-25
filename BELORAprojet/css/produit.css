@@ -1,0 +1,191 @@
+/* ============================================================
+   BÉLORA — Fiche produit
+   ============================================================ */
+
+/* ---------- Fil d'Ariane ---------- */
+
+.fil-ariane {
+    font-size: 0.84rem;
+    color: var(--gris);
+    padding: 1.6rem 0 2rem;
+}
+
+.fil-ariane a {
+    color: var(--gris);
+    text-decoration: none;
+}
+
+.fil-ariane a:hover {
+    color: var(--or);
+}
+
+.fil-ariane span {
+    margin: 0 0.3rem;
+}
+
+/* ---------- Bloc principal image + infos ---------- */
+
+.fiche {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 3.4rem;
+    align-items: start;
+    margin-bottom: 3.4rem;
+}
+
+.fiche-image img {
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: var(--ombre);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.fiche-info h1 {
+    font-size: 2.7rem;
+    margin-top: 0.7rem;
+}
+
+.fiche-sous-titre {
+    color: var(--gris);
+    font-size: 1rem;
+    margin-top: 0.2rem;
+}
+
+.fiche-note {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.8rem;
+    font-size: 0.85rem;
+    color: var(--gris);
+}
+
+.fiche-prix {
+    font-size: 1.9rem;
+    font-weight: 500;
+    color: var(--vert);
+    margin-top: 1.3rem;
+}
+
+.fiche-4x {
+    font-size: 0.84rem;
+    color: var(--gris);
+    margin-bottom: 1.4rem;
+}
+
+.fiche-accroche {
+    color: var(--or);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.fiche-description {
+    color: var(--gris);
+}
+
+.fiche-contenance {
+    display: inline-block;
+    margin: 1.4rem 0 1.6rem;
+    padding: 0.45rem 1.1rem;
+    border: 1px solid var(--sable);
+    border-radius: 999px;
+    background: var(--creme-clair);
+    font-size: 0.85rem;
+    color: var(--charbon);
+}
+
+/* ---------- Accordéons ---------- */
+
+.accordeons {
+    border-top: 1px solid var(--sable);
+    margin-bottom: 3.6rem;
+}
+
+.accordeon {
+    border-bottom: 1px solid var(--sable);
+}
+
+.accordeon-titre {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1.15rem 0.2rem;
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--vert);
+    text-align: left;
+}
+
+.accordeon-titre span {
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 1.4rem;
+    color: var(--or);
+    transition: transform 0.3s;
+}
+
+.accordeon.ouvert .accordeon-titre span {
+    transform: rotate(45deg);
+}
+
+.accordeon-contenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.accordeon.ouvert .accordeon-contenu {
+    max-height: 400px;
+}
+
+.accordeon-contenu p {
+    color: var(--gris);
+    padding: 0 0.2rem 1.3rem;
+}
+
+/* ---------- Suggestions ---------- */
+
+.suggestions h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.suggestions {
+    padding-top: 1rem;
+    border-top: 1px solid var(--sable);
+}
+
+/* ---------- Page produit introuvable ---------- */
+
+.centre-page {
+    text-align: center;
+    padding: 4.5rem 0;
+}
+
+.centre-page p {
+    color: var(--gris);
+    margin: 0.8rem 0 1.6rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+    .fiche {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .fiche-info h1 {
+        font-size: 2.1rem;
+    }
+}

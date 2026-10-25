@@ -1,0 +1,35 @@
+.contact-page {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.contact-page label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.contact-page input,
+.contact-page textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+.contact-page .msg {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    background: #e8f5e9;
+    color: #2e7d32;
+}

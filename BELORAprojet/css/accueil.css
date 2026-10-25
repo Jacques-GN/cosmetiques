@@ -1,0 +1,155 @@
+/* ============================================================
+   BÉLORA — Page d'accueil
+   ============================================================ */
+
+/* ---------- Hero en deux colonnes (style LUNA) ---------- */
+
+.hero {
+    padding: 3.5rem 0 3rem;
+}
+
+.hero-grille {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.hero-texte h1 {
+    font-size: 3.4rem;
+    margin-bottom: 1.3rem;
+}
+
+.hero-texte h1 em {
+    font-style: italic;
+    color: var(--or);
+}
+
+.hero-intro {
+    color: var(--gris);
+    max-width: 420px;
+    margin-bottom: 2rem;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: var(--ombre);
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+/* ---------- Bande des 3 bénéfices ---------- */
+
+.benefices {
+    border-top: 1px solid var(--sable);
+    border-bottom: 1px solid var(--sable);
+    background: var(--creme-clair);
+    padding: 1.4rem 0;
+}
+
+.benefices-grille {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.benefice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    text-align: left;
+}
+
+.benefice svg {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: var(--or);
+    stroke-width: 1.4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.benefice p {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--vert);
+    letter-spacing: 0.03em;
+}
+
+/* ---------- Section histoire (image + texte) ---------- */
+
+.bande-histoire {
+    background: var(--creme-clair);
+    border-top: 1px solid var(--sable);
+    border-bottom: 1px solid var(--sable);
+    padding: 4.2rem 0;
+}
+
+.histoire-grille {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.histoire-image img {
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: var(--ombre);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.histoire-texte h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.histoire-texte p {
+    color: var(--gris);
+    margin-bottom: 1.4rem;
+    max-width: 460px;
+}
+
+/* ---------- Bandeau CTA ---------- */
+
+.cta-bandeau {
+    background: var(--vert);
+    color: var(--creme-clair);
+    text-align: center;
+    padding: 3.6rem 0;
+}
+
+.cta-bandeau h2 {
+    color: var(--creme-clair);
+    font-size: 2.2rem;
+    margin-bottom: 1.6rem;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+    .hero-grille {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+
+    .hero-texte h1 {
+        font-size: 2.5rem;
+    }
+
+    .histoire-grille {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .benefices-grille {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}

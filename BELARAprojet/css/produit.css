@@ -1,0 +1,24 @@
+.detail-produit {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+.detail-produit img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.detail-produit .prix {
+    margin: 1rem 0;
+    color: #6b3945;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .detail-produit {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,113 @@
+/* ============================================================
+   BÉLORA — Page catalogue
+   ============================================================ */
+
+/* ---------- Introduction ---------- */
+
+.intro-page {
+    text-align: center;
+    padding: 3.4rem 5% 0;
+}
+
+.intro-page h1 {
+    font-size: 3rem;
+}
+
+.intro-texte {
+    color: var(--gris);
+    max-width: 540px;
+    margin: 1rem auto 0;
+}
+
+/* ---------- Barre de filtres + tri ---------- */
+
+.barre-filtres {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.filtres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.filtre {
+    padding: 0.5rem 1.3rem;
+    border: 1px solid var(--sable);
+    border-radius: 999px;
+    background: var(--creme-clair);
+    color: var(--charbon);
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.filtre:hover,
+.filtre.actif {
+    background: var(--vert);
+    border-color: var(--vert);
+    color: var(--creme-clair);
+}
+
+/* Sélecteur de tri */
+.form-tri {
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+    font-size: 0.88rem;
+    color: var(--gris);
+}
+
+.form-tri select {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    color: var(--charbon);
+    padding: 0.45rem 0.8rem;
+    border: 1px solid var(--sable);
+    border-radius: 999px;
+    background: var(--creme-clair);
+    cursor: pointer;
+}
+
+/* ---------- Compteur ---------- */
+
+.compte-produits {
+    color: var(--gris);
+    font-size: 0.85rem;
+    margin-bottom: 1.8rem;
+}
+
+/* ---------- Catalogue vide ---------- */
+
+.vide {
+    text-align: center;
+    color: var(--gris);
+    padding: 2.5rem 0;
+}
+
+.vide a {
+    color: var(--vert);
+    font-weight: 500;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 700px) {
+    .intro-page h1 {
+        font-size: 2.3rem;
+    }
+
+    .barre-filtres {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .form-tri {
+        justify-content: flex-end;
+    }
+}

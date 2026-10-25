@@ -1,0 +1,117 @@
+/* ============================================================
+   BÉLORA — Page Contact
+   ============================================================ */
+
+/* ---------- Introduction ---------- */
+
+.intro-page {
+    text-align: center;
+    padding: 3.4rem 5% 0;
+}
+
+.intro-page h1 {
+    font-size: 3rem;
+}
+
+.intro-texte {
+    color: var(--gris);
+    max-width: 540px;
+    margin: 1rem auto 0;
+}
+
+/* ---------- Grille : infos à gauche, formulaire à droite ---------- */
+
+.contact-grille {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3.4rem;
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: var(--gris);
+    margin-bottom: 1.2rem;
+}
+
+.contact-info code {
+    background: var(--creme-clair);
+    border: 1px solid var(--sable);
+    border-radius: 5px;
+    padding: 0.12rem 0.45rem;
+    font-size: 0.85em;
+}
+
+.contact-info img {
+    width: 100%;
+    border-radius: 22px;
+    box-shadow: var(--ombre);
+    margin: 0.6rem 0 1.4rem;
+}
+
+.contact-direct a {
+    color: var(--vert);
+    font-weight: 500;
+    text-decoration: none;
+    border-bottom: 1px solid var(--or);
+}
+
+.contact-direct a:hover {
+    color: var(--or);
+}
+
+/* ---------- Formulaire ---------- */
+
+.contact-form {
+    background: var(--creme-clair);
+    border: 1px solid var(--sable);
+    border-radius: var(--rayon);
+    padding: 2.3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-form label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--vert);
+    margin-top: 0.7rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--sable);
+    border-radius: 10px;
+    background: var(--blanc);
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    color: var(--charbon);
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--or);
+    box-shadow: 0 0 0 3px rgba(185, 154, 101, 0.18);
+}
+
+.contact-form .btn {
+    margin-top: 1.2rem;
+    align-self: flex-start;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 860px) {
+    .contact-grille {
+        grid-template-columns: 1fr;
+        gap: 2.2rem;
+    }
+}

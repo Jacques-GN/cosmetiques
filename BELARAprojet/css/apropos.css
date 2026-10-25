@@ -1,0 +1,9 @@
+.apropos-page {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.apropos-page p {
+    margin-bottom: 1rem;
+}
